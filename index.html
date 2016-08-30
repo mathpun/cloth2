@@ -1,0 +1,73 @@
+<!--
+Basic template for a Turk experiment.
+-->
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/canvas.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.url.js"></script>
+<script type="text/javascript" src="extend_jquery.js"></script>
+<script type="text/javascript" src="image_preloader.js"></script>
+<script type="text/javascript" src="taskutil.js"></script>
+<script type="text/javascript" src="super_task.js"></script>
+<script type="text/javascript" src="exclude.js"></script>
+<script type="text/javascript" src="classify20way.js"></script>
+</head>
+<body bgcolor="#90EE90">
+
+<!-- PREAMBLE -->
+<span id="pre"></span>
+
+<!-- EXPERIMENT SECTION -->
+<DIV id="exp"  style="" class="task_section">
+<div align="center">
+<span id="header"></span><br><br>
+</div>
+<div id="screen" align="center" style="">
+	<table border="0">
+	<tr>
+		<td><center><font color="blue"><font size="6">Hello!</center></td>
+	</tr>
+	<tr>
+		<div id="itest"></div>
+	</tr>
+	</table>
+	<br><font size="5"><font color="green">
+	Touch the one that matches!
+	<br>
+	<br><span id="message"></span><br>
+	<div id="itrain"> </div>
+</div>
+<center>
+<br>
+<br>
+<div id="accept_button">
+  <button onclick="task.accept_choice();">OK</button>
+</div>
+<div id="next_button">
+  <button onclick="task.next_trial();">Next</button>
+</div>
+</center>
+<!-- <br><br><center><button onclick="task.review_instructions();">Review instructions</button></center> -->
+</DIV>
+
+<!-- SURVEY SECTION -->
+<DIV id="survey" style="display:none;" class="task_section">
+
+    <center><h1>The end</h1></center>
+    <br>
+    <br>
+
+<div id="check_survey" style="">
+	<button onclick="task.survey_finished();">Print data.</button>
+</div>
+
+</DIV>
+
+</body>
+<<<<<<< Updated upstream
+=======
+<!--moved to end bc want to see when pages is built -->
+>>>>>>> Stashed changes
+<script type="text/javascript" src="classification.js"></script>
+</html>
