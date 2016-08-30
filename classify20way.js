@@ -4,15 +4,13 @@ $(document).ready(function() {
 	// Parameters
 	var ntask = 10; // how many different tasks (alphabets) are there?
 	var nway = 4; // n-way classification tasl
-	var ntest = 15; // just a test variable to see how to make more trials
 
 	// Selected demo images
 	//latin_id = 2;
-	zebra_id = 3;
-	snake_id = 4;
-	bird_id = 1;
-	lizard_id = 2;
-	seahorse_id = 4;
+	Plant_id = 1;
+	Shell_id = 3;
+	Tool_id = 2;
+	Frack_id = 4;
 
 	var spec = {};
 	spec.list_condition = ['a','b'];
@@ -23,7 +21,7 @@ $(document).ready(function() {
 	var data = {};
 	data.imglist_test = getlist_test(condition,ntask,nway);
 	data.imglist_list_train = getlist_train(condition,ntask,nway);
-	data.imglist_demo = getlist_test_demo(zebra_id,snake_id,bird_id,lizard_id,seahorse_id);
+	data.imglist_demo = getlist_test_demo(Plant_id,Shell_id,Tool_id,Frack_id);
 	data.imglist_list_demo = getlist_train_demo(nway);
 	task.load_images(data);
 	console.log("imglist_test:"+data.imglist_test);
@@ -57,15 +55,14 @@ var getlist_train = function (type,ntask,nway) {
 };
 
 // Get just the two test images for the demo
-var getlist_test_demo = function (zebra_id,snake_id,bird_id,lizard_id,seahorse_id) {
+var getlist_test_demo = function (Plant_id,Shell_id,Tool_id,Frack_id) {
 	var list = new Array();
 	var dname = 'images_classif_demo/';
 //  	list[0] = dname + 'latin_test' + latin_id + '.png';
-	list[0] = dname + 'zebra_test' + zebra_id + '.png';
-	list[1] = dname + 'snake_test' + snake_id + '.png';
-	list[2] = dname + 'bird_test' + bird_id + '.png';
-	list[3] = dname + 'lizard_test' + lizard_id + '.png';
-	list[4] = dname + 'seahorse_test' + seahorse_id + '.png';
+	list[0] = dname + 'Plant_test' + Plant_id + '.png';
+	list[1] = dname + 'Shell_test' + Shell_id + '.png';
+	list[2] = dname + 'Tool_test' + Tool_id + '.png';
+	list[3] = dname + 'Frack_test' + Frack_id + '.png';
 	return list;
 };
 
@@ -77,28 +74,24 @@ var getlist_train_demo = function (nway) {
 
 	list[0] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-  		list[0][c-1] = dname + 'zebra_train' + c + '.png';
+  		list[0][c-1] = dname + 'Plant_train' + c + '.png';
     }
 
 	list[1] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[1][c-1] = dname + 'snake_train' + c + '.png';
+	  	list[1][c-1] = dname + 'Shell_train' + c + '.png';
 	  }
 
 	list[2] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[2][c-1] = dname + 'bird_train' + c + '.png';
+	  	list[2][c-1] = dname + 'Tool_train' + c + '.png';
 	  }
 
 	list[3] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[3][c-1] = dname + 'lizard_train' + c + '.png';
+	  	list[3][c-1] = dname + 'Frack_train' + c + '.png';
 	  }
 
-		list[4] = new Array();
-		for (var c=1; c <= nway; c++ ) {
-		  	list[4][c-1] = dname + 'seahorse_train' + c + '.png';
-		  }
 
 	return list;
 };
