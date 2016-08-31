@@ -12,8 +12,11 @@ $(document).ready(function() {
 	Tool_id = 2;
 	Frack_id = 4;
 
-	var spec = {};
-	spec.list_condition = ['a','b'];
+
+	spec = 'a';
+	//took out line 18,19 added line 16
+	//var spec = {};
+	//spec.list_condition = ['a','b'];
 
 	task = classification(spec);
 	var condition = task.getCondition();
