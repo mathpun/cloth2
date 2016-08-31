@@ -12,10 +12,9 @@ $(document).ready(function() {
 	Tool_id = 2;
 	Frack_id = 4;
 
-
-	spec = 'a';
 	//took out line 18,19 added line 16, shit, turns out you need spec.list_condition 
 	//var spec = {};
+	var spec = {'a'};
 	spec.list_condition = ['a','a'];
 
 	task = classification(spec);
