@@ -15,7 +15,7 @@ $(document).ready(function() {
 	seahorse_id = 4;
 
 	var spec = {};
-	spec.list_condition = ['a','b'];
+	spec.list_condition = ['a'];
 
 	task = classification(spec);
 	var condition = task.getCondition();
