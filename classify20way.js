@@ -14,9 +14,9 @@ $(document).ready(function() {
 
 
 	spec = 'a';
-	//took out line 18,19 added line 16
+	//took out line 18,19 added line 16, shit, turns out you need spec.list_condition 
 	//var spec = {};
-	//spec.list_condition = ['a','b'];
+	spec.list_condition = ['a','a'];
 
 	task = classification(spec);
 	var condition = task.getCondition();
