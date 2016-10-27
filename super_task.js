@@ -49,6 +49,7 @@ var super_task = function (spec,my) {
 	my.div_check_survey = 'check_survey'; // division "id" surrounding the submit survey button
 	my.div_turk_form = 'turk_form'; // division "id" surrounding the turk form
 	
+	
     // SHARED FUNCTIONS
     my.throw_error = function (msg) {
 		tu.changeDisplay('',my.div_class);
@@ -121,6 +122,20 @@ var super_task = function (spec,my) {
 					var msg = 'Invalid URL parameter ("condition" is not a valid condition)';
 					my.throw_error(msg);
 				}
+			}
+			
+			//Adding the option to have letters first to have 2 conditions for classify task
+			if (my.url.param('letters_first') !== undefined) {
+				var p = (my.url.param('letters_first'));
+				if (p == 'true'|| p == 'false') {
+					my.letters_first = (my.url.param('letters_first'));
+				} else {
+					console.error('Invalid parameter for letters_first:' + p);
+				}
+			}
+
+			else {
+				my.letters_first = true;
 			}
 			
 			// process the remaining URL parameters

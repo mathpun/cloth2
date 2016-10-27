@@ -361,8 +361,14 @@ var classification = function (spec,my) {
 		data.imglist_list_train = tu.apply_perm(data.imglist_list_train,perm);
 
 		// add the demo ontop of things
-		data.imglist_test = data.imglist_demo.concat(data.imglist_test);;
-		data.imglist_list_train = data.imglist_list_demo.concat(data.imglist_list_train);
+		if (my.letters_first == 'true') {
+			data.imglist_test = data.imglist_test.concat(data.imglist_demo);
+			data.imglist_list_train = data.imglist_list_train.concat(data.imglist_list_demo);
+		}
+		else {
+			data.imglist_test = data.imglist_demo.concat(data.imglist_test);
+			data.imglist_list_train = data.imglist_list_demo.concat(data.imglist_list_train);
+		}
 
 		// select subset of trials
 		if (my.ntrials_override > 0) {
