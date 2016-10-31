@@ -27,7 +27,7 @@ $(document).ready(function() {
 	data.imglist_list_train = getlist_train(condition,ntask,nway);
 	var inds = shuffle([0,1,2,3]);
 	data.imglist_demo = getlist_test_demo(Plant_id,Shell_id,Tool_id,Q1_id,inds);
-	data.imglist_list_demo = getlist_train_demo(nway,inds);
+	data.imglist_list_demo = getlist_train_demo(nway,ntask,inds);
 	task.load_images(data);
 	console.log("imglist_test:"+data.imglist_test);
 	console.log("imglist_train:"+data.imglist_list_train);
@@ -93,28 +93,29 @@ var getlist_test_demo = function (Plant_id,Shell_id,Tool_id,Q1_id,r) {
 };
 
 // Get two lists of training images
-var getlist_train_demo = function (nway,r) {
+// changed nway to ntask below here 
+var getlist_train_demo = function (ntask,r) {
 	var list = new Array();
 	var dname = 'images_classif_demo/';
 //
 
 	list[r[0]] = new Array();
-	for (var c=1; c <= nway; c++ ) {
+	for (var c=1; c <= ntask; c++ ) {
   		list[r[0]][c-1] = dname + 'Plant_train' + c + '.png';
     }
 
 	list[r[1]] = new Array();
-	for (var c=1; c <= nway; c++ ) {
+	for (var c=1; c <= ntask; c++ ) {
 	  	list[r[1]][c-1] = dname + 'Shell_train' + c + '.png';
 	  }
 
 	list[r[2]] = new Array();
-	for (var c=1; c <= nway; c++ ) {
+	for (var c=1; c <= ntask; c++ ) {
 	  	list[r[2]][c-1] = dname + 'Tool_train' + c + '.png';
 	  }
 	
 	list[r[3]] = new Array();
-	for (var c=1; c <= nway; c++ ) {
+	for (var c=1; c <= ntask; c++ ) {
 	  	list[r[3]][c-1] = dname + 'Q1_train' + c + '.png';
 	  }
 
