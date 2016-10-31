@@ -26,7 +26,7 @@ $(document).ready(function() {
 	var data = {};
 	data.imglist_test = getlist_test(condition,ntask,nway);
 	data.imglist_list_train = getlist_train(condition,ntask,nway);
-	var inds = shuffle([0,1,2,3]);
+	var inds = shuffle([0,1,2,3,4]);
 	data.imglist_demo = getlist_test_demo(Plant_id,Shell_id,Tool_id,Frack_id,Q1_id,inds);
 	data.imglist_list_demo = getlist_train_demo(nway,inds);
 	task.load_images(data);
