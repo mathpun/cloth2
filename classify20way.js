@@ -115,7 +115,7 @@ var getlist_train_demo = function (nway,r) {
 	
 	list[r[3]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[4]][c-1] = dname + 'Q1_train' + c + '.png';
+	  	list[r[3]][c-1] = dname + 'Q1_train' + c + '.png';
 	  }
 
 	return list;
