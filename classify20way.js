@@ -88,7 +88,7 @@ var getlist_test_demo = function (Plant_id,Shell_id,Tool_id,Frack_id,Q1_id,r) {
 	list[r[1]] = dname + 'Shell_test' + Shell_id + '.png';
 	list[r[2]] = dname + 'Tool_test' + Tool_id + '.png';
 	list[r[3]] = dname + 'Frack_test' + Frack_id + '.png';
-	list[r[4]] = dname + 'Q1' + Q1_id + '.png';
+	list[r[4]] = dname + 'Q1_test' + Q1_id + '.png';
 	return list;
 };
 
