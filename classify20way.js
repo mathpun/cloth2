@@ -145,52 +145,52 @@ var getlist_train_demo = function (nway,r) {
 	
 	list[r[5]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[4]][c-1] = dname + 'Q6_train' + c + '.png';
+	  	list[r[5]][c-1] = dname + 'Q6_train' + c + '.png';
 	  }
 	
 	list[r[6]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[4]][c-1] = dname + 'Q7_train' + c + '.png';
+	  	list[r[6]][c-1] = dname + 'Q7_train' + c + '.png';
 	  }
 	
 	list[r[7]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[4]][c-1] = dname + 'Q8_train' + c + '.png';
+	  	list[r[7]][c-1] = dname + 'Q8_train' + c + '.png';
 	  }
 
 	list[r[8]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[4]][c-1] = dname + 'Q9_train' + c + '.png';
+	  	list[r[8]][c-1] = dname + 'Q9_train' + c + '.png';
 	  }
 	
 	list[r[9]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[4]][c-1] = dname + 'Q10_train' + c + '.png';
+	  	list[r[9]][c-1] = dname + 'Q10_train' + c + '.png';
 	  }
 	
 	list[r[10]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[4]][c-1] = dname + 'Q11_train' + c + '.png';
+	  	list[r[10]][c-1] = dname + 'Q11_train' + c + '.png';
 	  }
 	
 	list[r[11]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[4]][c-1] = dname + 'Q12_train' + c + '.png';
+	  	list[r[11]][c-1] = dname + 'Q12_train' + c + '.png';
 	  }
 	
 	list[r[12]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[4]][c-1] = dname + 'Q13_train' + c + '.png';
+	  	list[r[12]][c-1] = dname + 'Q13_train' + c + '.png';
 	  }
 	
 	list[r[13]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[4]][c-1] = dname + 'Q14_train' + c + '.png';
+	  	list[r[13]][c-1] = dname + 'Q14_train' + c + '.png';
 	  }
 	
 	list[r[14]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[4]][c-1] = dname + 'Q15_train' + c + '.png';
+	  	list[r[14]][c-1] = dname + 'Q15_train' + c + '.png';
 	  }
 	
 	return list;
