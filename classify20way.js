@@ -4,6 +4,7 @@ $(document).ready(function() {
 	// Parameters
 	var ntask = 16; // how many different tasks (alphabets) are there?
 	var nway = 4; // n-way classification tasl
+	var ndemo = 5; // how mamy tufa questions there are 
 
 	// Selected demo images
 	//latin_id = 2;
@@ -11,6 +12,7 @@ $(document).ready(function() {
 	Shell_id = 3;
 	Tool_id = 2;
 	Frack_id = 4;
+	Q1_id = 3;
 
 
 	//took out line 18,19 added line 16, shit, turns out you need spec.list_condition 
@@ -24,8 +26,8 @@ $(document).ready(function() {
 	var data = {};
 	data.imglist_test = getlist_test(condition,ntask,nway);
 	data.imglist_list_train = getlist_train(condition,ntask,nway);
-	var inds = shuffle([0,1,2,3]);
-	data.imglist_demo = getlist_test_demo(Plant_id,Shell_id,Tool_id,Frack_id,inds);
+	var inds = shuffle([0,1,2,3,4]);
+	data.imglist_demo = getlist_test_demo(Plant_id,Shell_id,Tool_id,Frack_id,Q1_id,inds);
 	data.imglist_list_demo = getlist_train_demo(nway,inds);
 	task.load_images(data);
 	console.log("imglist_test:"+data.imglist_test);
@@ -79,7 +81,7 @@ var getlist_train = function (type,ntask,nway) {
 };
 
 // Get just the two test images for the demo
-var getlist_test_demo = function (Plant_id,Shell_id,Tool_id,Frack_id,r) {
+var getlist_test_demo = function (Plant_id,Shell_id,Tool_id,Frack_id,Q1_id,r) {
 	var list = new Array();
 	var dname = 'images_classif_demo/';
 //  	list[0] = dname + 'latin_test' + latin_id + '.png';
@@ -87,6 +89,7 @@ var getlist_test_demo = function (Plant_id,Shell_id,Tool_id,Frack_id,r) {
 	list[r[1]] = dname + 'Shell_test' + Shell_id + '.png';
 	list[r[2]] = dname + 'Tool_test' + Tool_id + '.png';
 	list[r[3]] = dname + 'Frack_test' + Frack_id + '.png';
+	list[r[4]] = dname + 'Q1_test' + Q1_id + '.png';
 	return list;
 };
 
@@ -110,12 +113,16 @@ var getlist_train_demo = function (nway,r) {
 	for (var c=1; c <= nway; c++ ) {
 	  	list[r[2]][c-1] = dname + 'Tool_train' + c + '.png';
 	  }
-
+	
 	list[r[3]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
 	  	list[r[3]][c-1] = dname + 'Frack_train' + c + '.png';
 	  }
-
+	
+	list[r[4]] = new Array();
+	for (var c=1; c <= nway; c++ ) {
+	  	list[r[4]][c-1] = dname + 'Q1_train' + c + '.png';
+	  }
 
 	return list;
 };
