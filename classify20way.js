@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	// Parameters
 	var ntask = 15; // how many different tasks (alphabets) are there?
-	var nway = 4; // n-way classification tasl
+	var nway = 2; // n-way classification tasl
 
 	// Selected demo images
 	//latin_id = 2;
