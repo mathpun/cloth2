@@ -4,6 +4,7 @@ $(document).ready(function() {
 	// Parameters
 	var ntask = 10; // how many different tasks (alphabets) are there?
 	var nway = 2; // n-way classification tasl
+	var oops = 1; // I only ever want the same test image 
 
 	// Selected demo images
 	//latin_id = 2;
@@ -17,11 +18,11 @@ $(document).ready(function() {
 	Q8_id = 3;
 	Q9_id = 1;
 	Q10_id = 3;
-	Q11_id = 2;
-	Q12_id = 4;
-	Q13_id = 2;
-	Q14_id = 2;
-	Q15_id = 3;
+	//Q11_id = 2;
+	//Q12_id = 4;
+	//Q13_id = 2;
+	//Q14_id = 2;
+	//Q15_id = 3;
 
 
 	//took out line 18,19 added line 16, shit, turns out you need spec.list_condition 
@@ -35,8 +36,8 @@ $(document).ready(function() {
 	var data = {};
 	data.imglist_test = getlist_test(condition,ntask,nway);
 	data.imglist_list_train = getlist_train(condition,ntask,nway);
-	var inds = shuffle([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]);
-	data.imglist_demo = getlist_test_demo(Q1_id,Q2_id,Q3_id,Q4_id,Q5_id,Q6_id,Q7_id,Q8_id,Q9_id,Q10_id,Q11_id,Q12_id,Q13_id,Q14_id,Q15_id,inds);
+	var inds = shuffle([0,1,2,3,4,5,6,7,8,9]);
+	data.imglist_demo = getlist_test_demo(Q1_id,Q2_id,Q3_id,Q4_id,Q5_id,Q6_id,Q7_id,Q8_id,Q9_id,Q10_id,inds);
 	data.imglist_list_demo = getlist_train_demo(nway,inds);
 	task.load_images(data);
 	console.log("imglist_test:"+data.imglist_test);
@@ -64,7 +65,7 @@ function shuffle(array) {
 }
 
 // randomly choose a "test" image for each trial
-var getlist_test = function (type,ntask,nway) {
+var getlist_test = function (type,ntask,nway,oops) {
     var list = new Array();
     var dname = 'images_classif/';
   	var count = 0;
@@ -90,7 +91,9 @@ var getlist_train = function (type,ntask,nway) {
 };
 
 // Get just the two test images for the demo
-var getlist_test_demo = function (Q1_id,Q2_id,Q3_id,Q4_id,Q5_id,Q6_id,Q7_id,Q8_id,Q9_id,Q10_id,Q11_id,Q12_id,Q13_id,Q14_id,Q15_id,r) {
+//var getlist_test_demo = function (Q1_id,Q2_id,Q3_id,Q4_id,Q5_id,Q6_id,Q7_id,Q8_id,Q9_id,Q10_id,Q11_id,Q12_id,Q13_id,Q14_id,Q15_id,r) {
+var getlist_test_demo = function (Q1_id,Q2_id,Q3_id,Q4_id,Q5_id,Q6_id,Q7_id,Q8_id,Q9_id,Q10_id,r) {
+
 	var list = new Array();
 	var dname = 'images_classif_demo/';
 //  	list[0] = dname + 'latin_test' + latin_id + '.png';
@@ -104,11 +107,11 @@ var getlist_test_demo = function (Q1_id,Q2_id,Q3_id,Q4_id,Q5_id,Q6_id,Q7_id,Q8_i
 	list[r[7]] = dname + 'Q8_test' + Q8_id + '.png';
 	list[r[8]] = dname + 'Q9_test' + Q9_id + '.png';
 	list[r[9]] = dname + 'Q10_test' + Q10_id + '.png';
-	list[r[10]] = dname + 'Q11_test' + Q11_id + '.png';
-	list[r[11]] = dname + 'Q12_test' + Q12_id + '.png';
-	list[r[12]] = dname + 'Q13_test' + Q13_id + '.png';
-	list[r[13]] = dname + 'Q14_test' + Q14_id + '.png';
-	list[r[14]] = dname + 'Q15_test' + Q15_id + '.png';
+//	list[r[10]] = dname + 'Q11_test' + Q11_id + '.png';
+//	list[r[11]] = dname + 'Q12_test' + Q12_id + '.png';
+//	list[r[12]] = dname + 'Q13_test' + Q13_id + '.png';
+//	list[r[13]] = dname + 'Q14_test' + Q14_id + '.png';
+//	list[r[14]] = dname + 'Q15_test' + Q15_id + '.png';
 	return list;
 };
 
@@ -167,31 +170,6 @@ var getlist_train_demo = function (nway,r) {
 	for (var c=1; c <= nway; c++ ) {
 	  	list[r[9]][c-1] = dname + 'Q10_train' + c + '.png';
 	  }
-	
-	list[r[10]] = new Array();
-	for (var c=1; c <= nway; c++ ) {
-	  	list[r[10]][c-1] = dname + 'Q11_train' + c + '.png';
-	  }
-	
-	list[r[11]] = new Array();
-	for (var c=1; c <= nway; c++ ) {
-	  	list[r[11]][c-1] = dname + 'Q12_train' + c + '.png';
-	  }
-	
-	list[r[12]] = new Array();
-	for (var c=1; c <= nway; c++ ) {
-	  	list[r[12]][c-1] = dname + 'Q13_train' + c + '.png';
-	  }
-	
-	list[r[13]] = new Array();
-	for (var c=1; c <= nway; c++ ) {
-	  	list[r[13]][c-1] = dname + 'Q14_train' + c + '.png';
-	  }
-	
-	list[r[14]] = new Array();
-	for (var c=1; c <= nway; c++ ) {
-	  	list[r[14]][c-1] = dname + 'Q15_train' + c + '.png';
-	  }
-	
+		
 	return list;
 };
