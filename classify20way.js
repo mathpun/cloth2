@@ -63,32 +63,6 @@ function shuffle(array) {
   return array;
 }
 
-// randomly choose a "test" image for each trial
-var getlist_test = function (type,ntask,nway,oops) {
-    var list = new Array();
-    var dname = 'images_classif/';
-  	var count = 0;
-  	for (var i=1; i <= ntask; i++) {
-  		var c = tu.randint(1,nway); // random choice of the image
-  		list[count] = dname + 'task' + i + type + '_test' + c + '.png';
-  		count++;
-  	}
-    return list;
-};
-
-// enumerate the image set which is the training images
-var getlist_train = function (type,ntask,nway) {
-    var list = new Array();
-    var dname = 'images_classif/';
-  	for (var i=1; i <= ntask; i++) {
-  		list[i-1] = new Array();
-  		for (var c=1; c <= nway; c++ ) {
-  			list[i-1][c-1] = dname + 'task' + i + type + '_train' + c + '.png';
-  		}
-  	}
-    return list;
-};
-
 // Get just the two test images for the demo
 //var getlist_test_demo = function (Q1_id,Q2_id,Q3_id,Q4_id,Q5_id,Q6_id,Q7_id,Q8_id,Q9_id,Q10_id,Q11_id,Q12_id,Q13_id,Q14_id,Q15_id,r) {
 var getlist_test_demo = function (Q1_id,Q2_id,r) {
@@ -132,3 +106,31 @@ var getlist_train_demo = function (nway,r) {
 		
 	return list;
 };
+
+// randomly choose a "test" image for each trial
+var getlist_test = function (type,ntask,nway,oops) {
+    var list = new Array();
+    var dname = 'images_classif/';
+  	var count = 0;
+  	for (var i=1; i <= ntask; i++) {
+  		var c = tu.randint(1,nway); // random choice of the image
+  		list[count] = dname + 'task' + i + type + '_test' + c + '.png';
+  		count++;
+  	}
+    return list;
+};
+
+// enumerate the image set which is the training images
+var getlist_train = function (type,ntask,nway) {
+    var list = new Array();
+    var dname = 'images_classif/';
+  	for (var i=1; i <= ntask; i++) {
+  		list[i-1] = new Array();
+  		for (var c=1; c <= nway; c++ ) {
+  			list[i-1][c-1] = dname + 'task' + i + type + '_train' + c + '.png';
+  		}
+  	}
+    return list;
+};
+
+
