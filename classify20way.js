@@ -33,11 +33,11 @@ $(document).ready(function() {
 	var condition = task.getCondition();
 
 	var data = {};
-	data.imglist_test = getlist_test(condition,ntask,nway);
-	data.imglist_list_train = getlist_train(condition,ntask,nway);
 	var inds = shuffle([0,1]);
 	data.imglist_demo = getlist_test_demo(Q1_id,Q2_id,inds);
 	data.imglist_list_demo = getlist_train_demo(nway,inds);
+	data.imglist_test = getlist_test(condition,ntask,nway);
+	data.imglist_list_train = getlist_train(condition,ntask,nway);
 	task.load_images(data);
 	console.log("imglist_test:"+data.imglist_test);
 	console.log("imglist_train:"+data.imglist_list_train);
