@@ -114,7 +114,7 @@ var getlist_test = function (type,ntask,nway,oops) {
   	var count = 0;
   	for (var i=1; i <= ntask; i++) {
   		var c = tu.randint(1,nway); // random choice of the image
-  		list[count] = dname + 'task' + i + type + '_test1' + '.png';
+  		list[count] = dname + 'task' + i + type + '_test' + c + '.png';
   		count++;
   	}
     return list;
