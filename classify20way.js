@@ -127,8 +127,8 @@ var getlist_train = function (type,ntask,nway) {
   	for (var i=1; i <= ntask; i++) {
   		list[i-1] = new Array();
   		for (var c=1; c <= nway; c++ ) {
-//  			list[i-1][c-1] = dname + 'task' + i + type + '_train' + c + '.png';
-			list[i-1][c-1] = dname + 'task' + i + type + '_train1' + '.png';
+  			list[i-1][c-1] = dname + 'task' + i + type + '_train' + c + '.png';
+//			list[i-1][c-1] = dname + 'task' + i + type + '_train1' + '.png'; doesnt work :(
   		}
   	}
     return list;
