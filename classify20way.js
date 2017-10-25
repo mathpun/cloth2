@@ -114,7 +114,7 @@ var getlist_test = function (type,ntask,nway,oops) {
   	var count = 0;
   	for (var i=1; i <= ntask; i++) {
   		var c = tu.randint(1,nway); // random choice of the image
-  		list[count] = dname + 'task' + i + type + '_test' + c + '.png';
+  		list[count] = dname + 'task' + i + type + '_test' + '1' + '.png';
   		count++;
   	}
     return list;
@@ -127,7 +127,7 @@ var getlist_train = function (type,ntask,nway) {
   	for (var i=1; i <= ntask; i++) {
   		list[i-1] = new Array();
   		for (var c=1; c <= nway; c++ ) {
-  			list[i-1][c-1] = dname + 'task' + i + type + '_train' + '1' + '.png';
+  			list[i-1][c-1] = dname + 'task' + i + type + '_train' + 'c' + '.png';
   		}
   	}
     return list;
