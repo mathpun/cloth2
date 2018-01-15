@@ -84,7 +84,7 @@ td.bordered_cell {
 }
 
 .cell_correct {
-	border : 1px solid black;
+	border : 1px solid white;
 	background-color: #90EE90;
 }
 
