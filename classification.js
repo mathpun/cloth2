@@ -29,7 +29,7 @@ var classification = function (spec,my) {
 	var super_check_survey = my.superior('check_survey');
 
 	// PARAMETERS
-	my.feedback_on = true; // display feedback after each trial?
+	my.feedback_on = false; // display feedback after each trial?
 	my.random_choices = false; // randomize order of training image choices?
 	my.size_img  = 200; // size of the images
 
