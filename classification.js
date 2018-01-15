@@ -65,7 +65,7 @@ var classification = function (spec,my) {
 
 	// messages
 	my.msg_correct = '<font size="5"><font color="#FF1493">Yay!</font>';
-	my.msg_incorrect = '<font size="5"><font color="#FF1493">Yay!</font><font size="5" color="blue">blue</font>';
+	my.msg_incorrect = '<font size="5"><font color="#FF1493">Yay!</font>';
 
 	// css classes
 	my.css_cell_type = 'bordered_cell';
