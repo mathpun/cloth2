@@ -113,17 +113,17 @@ var getlist_test = function (type,ntask,nway,oops) {
     var dname = 'images_classif/';
   	var count = 0;
 	// hard-code condition one 
-	list[0] = dname + 'task' + 1 + type + '_test' + 1 + '.png';
-	list[1] = dname + 'task' + 2 + type + '_test' + 1 + '.png';
-	list[2] = dname + 'task' + 3 + type + '_test' + 1 + '.png';
-	list[3] = dname + 'task' + 4 + type + '_test' + 1 + '.png';
-	list[4] = dname + 'task' + 5 + type + '_test' + 1 + '.png';
-	list[5] = dname + 'task' + 6 + type + '_test' + 1 + '.png';
-//   	for (var i=1; i <= ntask; i++) {
-//   		var c = tu.randint(1,nway); // random choice of the image
-//   		list[count] = dname + 'task' + i + type + '_test' + c + '.png';
-//   		count++;
-//   	}
+// 	list[0] = dname + 'task' + 1 + type + '_test' + 1 + '.png';
+// 	list[1] = dname + 'task' + 2 + type + '_test' + 1 + '.png';
+// 	list[2] = dname + 'task' + 3 + type + '_test' + 1 + '.png';
+// 	list[3] = dname + 'task' + 4 + type + '_test' + 1 + '.png';
+// 	list[4] = dname + 'task' + 5 + type + '_test' + 1 + '.png';
+// 	list[5] = dname + 'task' + 6 + type + '_test' + 1 + '.png';
+  	for (var i=1; i <= ntask; i++) {
+  		var c = tu.randint(1,nway); // random choice of the image
+  		list[count] = dname + 'task' + i + type + '_test' + c + '.png';
+  		count++;
+  	}
     return list;
 };
 
